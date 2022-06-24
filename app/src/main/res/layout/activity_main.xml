@@ -4,19 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@color/lightGrey"
+    tools:context=".activities.MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/myTasksHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="69dp"
         android:layout_marginEnd="224dp"
-        android:layout_marginBottom="57dp"
         android:text="My Tasks"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,35 +25,63 @@
         android:layout_width="128dp"
         android:layout_height="58dp"
         android:layout_marginStart="59dp"
-        android:layout_marginTop="37dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="85dp"
         android:text="ADD TASK"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/AllTasksbutton"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/AllTasksbutton"
         android:layout_width="128dp"
         android:layout_height="58dp"
-        android:layout_marginTop="37dp"
         android:layout_marginEnd="49dp"
         android:layout_marginBottom="85dp"
         android:text="ALL TASKS"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="357dp"
-        android:layout_height="390dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <Button
+        android:id="@+id/walkDog"
+        android:layout_width="169dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="71dp"
+        android:text="Walk the Dog"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_report_image" />
+        app:layout_constraintTop_toBottomOf="@+id/myTasksHeader" />
+
+    <Button
+        android:id="@+id/feedDog"
+        android:layout_width="169dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="34dp"
+        android:text="Feed the Dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/walkDog" />
+
+    <Button
+        android:id="@+id/vacuumDog"
+        android:layout_width="169dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="42dp"
+        android:text="Vacuum the Dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/feedDog" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="67dp"
+        android:src="?android:attr/fingerprintAuthDrawable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/myTasksHeader"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

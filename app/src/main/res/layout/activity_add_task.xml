@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTask">
+    android:background="@color/lightGrey"
+    tools:context=".activities.AddTask">
+
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/greeting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -18,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/TaskTitle"
         android:layout_width="356dp"
         android:layout_height="96dp"
         android:layout_marginStart="24dp"
@@ -26,10 +30,11 @@
         android:layout_marginBottom="595dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Task title"
+        android:hint="Task title"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/greeting"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -40,12 +45,13 @@
         android:layout_marginTop="91dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Task Description"
+        android:hint="Task Description"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+        app:layout_constraintTop_toBottomOf="@+id/TaskTitle" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addtasksubmitbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -63,6 +69,6 @@
         android:text="Total tasks: 0"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/addtasksubmitbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
