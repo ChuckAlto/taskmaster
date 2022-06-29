@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userName = preferences.getString(SettingsPage.USER_NAME_TAG, "No Name");
+        String userName = preferences.getString(SettingsPage.USER_NAME_TAG, "My Tasks");
         TextView userNameText = findViewById(R.id.myTasksHeader);
         userNameText.setText(userName);
 
