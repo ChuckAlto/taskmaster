@@ -32,61 +32,46 @@ public class MainActivity extends AppCompatActivity {
 
 
         setUpSettingsImageView();
+        setUpWalkDogButton();
+        setUpFeedDogButton();
+        setUpVacuumDogButton();
+    }
+
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        String userName = preferences.getString(SettingsPage.USER_NAME_TAG, "No name");
+//        TextView userNameText = findViewById(R.id.userNameInput);
+//        userNameText.setText((userName));
+//    }
 
 
 
-
-
-        Button addTaskButton = findViewById(R.id.AddTaskButton);
-
-        addTaskButton.setOnClickListener(v -> {
-            Intent goToAddTaskIntent = new Intent(MainActivity.this, AddTask.class);
-            startActivity(goToAddTaskIntent);
-        });
-
-
-
-
-
-        Button allTasksButton = MainActivity.this.findViewById(R.id.AllTasksbutton);
-
-        allTasksButton.setOnClickListener(v ->
-
-        {
-            Intent goToAllTasksIntent = new Intent(MainActivity.this, AllTasks.class);
-            startActivity(goToAllTasksIntent);
-        });
-
-
-
-
-        Button addWalkButton = findViewById(R.id.walkDog);
-
-        addWalkButton.setOnClickListener(v ->
-
-        {
+    private void setUpWalkDogButton(){
+        Button walkDogButton = findViewById(R.id.walkDog);
+        walkDogButton.setOnClickListener(v -> {
             Intent goToWalkDogIntent = new Intent(MainActivity.this, TaskDetailPage.class);
-            startActivity(goToWalkDogIntent);
+            goToWalkDogIntent.putExtra(User_Name_Tag, "Walk The Dog");
+            startActivity((goToWalkDogIntent));
         });
+    }
 
-        Button addFeedButton = findViewById(R.id.feedDog);
-
-        addFeedButton.setOnClickListener(v ->
-
-        {
+    private void setUpFeedDogButton(){
+        Button feedDogButton = findViewById(R.id.feedDog);
+        feedDogButton.setOnClickListener(v -> {
             Intent goToFeedDogIntent = new Intent(MainActivity.this, TaskDetailPage.class);
-            startActivity(goToFeedDogIntent);
+            goToFeedDogIntent.putExtra(User_Name_Tag, "Feed The Dog");
+            startActivity((goToFeedDogIntent));
         });
+    }
 
-        Button addVacuumButton = findViewById(R.id.vacuumDog);
-
-        addVacuumButton.setOnClickListener(v ->
-
-        {
+    private void setUpVacuumDogButton(){
+        Button vacuumDogButton = findViewById(R.id.vacuumDog);
+        vacuumDogButton.setOnClickListener(v -> {
             Intent goToVacuumDogIntent = new Intent(MainActivity.this, TaskDetailPage.class);
-            startActivity(goToVacuumDogIntent);
+            goToVacuumDogIntent.putExtra(User_Name_Tag, "Vacuum The Dog");
+            startActivity((goToVacuumDogIntent));
         });
-
     }
 
     private void setUpSettingsImageView(){
